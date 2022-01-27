@@ -1,0 +1,27 @@
+---
+layout: default
+title: Contact Me
+---
+<section class="page-title-alt bg-primary position-relative">
+
+  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-yellow.png" alt="illustrations" class="bg-shape-6">
+  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-orange.png" alt="illustrations" class="bg-shape-1">
+  
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-1">
+        <ul class="list-unstyled ml-1 mt-2 position-relative zindex-1"> 
+          {% for social in site.data.settings.social %}
+          <li class="mb-3"><a class="text-white" href="{{ social.link }}" target="_blank"><i class="{{ social.icon }}"></i></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+
+{% include contact-section.html %}

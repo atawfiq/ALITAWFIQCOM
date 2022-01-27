@@ -1,0 +1,84 @@
+---
+layout: default
+---
+<!-- page title -->
+<section class="page-title-alt bg-primary position-relative">
+
+<!--   <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-yellow.png" alt="illustrations" class="bg-shape-5">
+  <img src="{{ site.baseurl }}/assets/images/illustrations/leaf-orange.png" alt="illustrations" class="bg-shape-1"> -->
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-1">
+        <ul class="list-unstyled ml-1 mt-2 position-relative zindex-1 d-none d-sm-block"> 
+          {% for social in site.data.settings.social %}
+          <li class="mb-3"><a class="text-white" style="font-size:1.75rem" href="{{ social.link }}" target="_blank"><i class="{{ social.icon }}"></i></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col-11">
+        <h3 class="text-white font-tertiary">Hi! I’m Ali <br> I Build, Scale & Advise <br> Products and Ventures</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /page title -->
+
+  <!-- about -->
+  <section class="section pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          {{ content }}
+        </div>
+        <div class="col-md-4 text-center drag-lg-top">
+          <div class="row">
+            <div class="shadow-down mb-4">
+              <img src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.author }}" class="img-fluid w-100 rounded-lg border-thick border-white">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3 offset-3">
+              <a class="text-dark" style="font-size:2rem" href="https://www.linkedin.com/in/atawfiq/" target="_blank"><i class="ti-linkedin"></i></a>
+            </div>
+            <div class="col-3">
+              <a class="text-dark" style="font-size:2rem" href="https://twitter.com/atawfiq" target="_blank"><i class="ti-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /about -->
+
+  {% include service-pillars-section.html %}
+
+  {% include skills-section.html %}
+
+  {% include experience-section.html %}
+
+  {% include education-section.html %}
+
+
+
+  {% comment %} 
+  <!--{
+  % include services-section.html %}
+  % include team-section.html %} --> 
+  {% endcomment %}
+  
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">I've worked with</h2>
+        </div>
+      </div>
+      {% include client-slider.html %}
+    </div>
+  </section>
+
+
+
+

@@ -1,0 +1,171 @@
+#-------------------------------
+# General Site Settings
+
+title: Ali Tawfiq
+logo: 
+author: Ali Tawfiq
+description: A sneak peak into Ali Tawfiq's (professional) life
+# description: A little bit of background about my previous projects, the things I enjoy most, and the work I am always ready to pick up
+email: ali.tawfiq@gmail.com
+phone: 
+address: Toronto/Remote
+copyright: Copyright Ali Tawfiq &copy;
+
+menu:
+#- {name: About, link: '/about'}
+#- {name: Contact, link: '/contact'}
+
+
+#-------------------------------
+# Google Analytics Section
+google-analytics: UA-61826002-1 # UA-XXXXXX-X
+
+
+#-------------------------------
+# Comment Section (Disqus)
+
+disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
+
+
+#-------------------------------
+# Hero Section
+
+hero:
+  hero-title: Hi! fdadI’m Ali <br> I Build, Scale & Advise <br> Products and Ventures
+
+social:
+- {icon: "ti-linkedin", link: "https://www.linkedin.com/in/atawfiq/"}
+- {icon: "ti-twitter", link: "https://twitter.com/atawfiq"}
+
+#-------------------------------
+# About (Section and Page)
+
+# About Section
+blurb:
+  Always fascinated by early stage product development especially in the tech, online learning, online communities, digital health and social spaces. Coming through with an engineering background I’ve enjoyed working on changing the way consumers, service providers and researchers interact with emerging technology. I love to get my hands dirty with all aspects of product development, from business to coding and back. I've most recently founded, built and scaled <a href="https://www.goboomerang.com" target="_blank">Boomerang</a> into a business with over 70k baby boomers looking to explore their passions as they approach retirement. 
+
+blurb-btn-link: '/about'
+blurb-btn-name: Learn More
+
+
+# About Page
+
+# service-pillars Section
+service-pillars:
+  - title : "Product Strategy"
+    icon : "assets/images/icons/strategic-plan.png"
+    content : "Support venture and product leads with mapping out, validating and strengthening their product strategies, including: mapping out competitive landscapes, roadmap validation and business concept validation"
+    
+  - title : "Rapid Prototyping"
+    icon : "assets/images/icons/coding.png"
+    content : "Help clients with validating new product/ feature hypotheses through no-code prototyping, including: building landing pages, integrating with payment providers, integrating analytics, and synthesizing the learnings"
+    
+  - title : "Product Coaching"
+    icon : "assets/images/icons/team.png"
+    content : "Support and strengthen the skills of existing product teams to help them adapt agile and rapid product development practices, including: one-on-one coaching, project management, and release planning"
+
+  - title : "Experimentation"
+    icon : "assets/images/icons/experiment.png"
+    content : "Help clients with mapping out the full scope of product experiments, including: scoping the experiment parameters, mapping out the user journey, identifying KPIs and managing the execution"
+
+
+
+#-------------------------------
+# Skills Section
+
+skills-title: Skills
+skills:
+- {name: Rapid Prototyping, color: '#9494b8', value: '90%'}
+- {name: Product Strategy, color: '#00664d', value: '90%'}
+- {name: Growth Hacking, color: '#734d26', value: '75%'}
+- {name: Executive Leadership, color: '#476b6b', value: '75%'}
+- {name: Product Coaching, color: '#660000', value: '85%'}
+- {name: Product Marketing, color: '#4d004d', value: '55%'}
+- {name: Market Research, color: '#990000', value: '75%'}
+- {name: Business Strategy, color: '#ffbcaa', value: '80%'}
+
+
+#-------------------------------
+# Exprerience Section
+
+experience-title: Experience
+experience:
+- {name: Co-founder & CEO, icon: 'icon-1.png', date: 'Feb 2019 - Dec 2021', organization: 'Boomerang'}
+- {name: Product & Business Advisor, icon: 'icon-2.png', date: '2015 - Present', organization: 'Freelance'}
+- {name: Product Director/ Executive Advisor, icon: 'icon-3.png', date: 'Apr 2018 - Present', organization: 'RBC Ventures'}
+- {name: Lead Product Manager, icon: 'icon-1.png', date: 'May 2015 - Apr 2018', organization: '500px'}
+
+
+#-------------------------------
+# Education Section
+
+education-title: Education
+education:
+- {name: Masters in Electrical & Computer Engineering, date: '2012', organization: 'University of Toronto'}
+- {name: Bachelors in Electrical & Computer Engineering, date: '2010', organization: 'University of Toronto'}
+- {name: IDEO Design Kit - Rapid Prototyping, date: '2015', organization: 'IDEO.org'}
+- {name: Bioengineering Minor, date: '2010', organization: 'University of Toronto'}
+
+
+#-------------------------------
+# Services Section
+
+services-title: Service Pillars
+services:
+- {
+    name: Product Strategy,
+    icon: ti-stats-up,
+    description: 'Support executive and product teams with mapping out, validating and strengthening their medium & long term product strategies.',
+    active: # Add true to select section
+  }
+- {
+    name: Rapid Prototyping,
+    icon: ti-desktop,
+    description: 'Help teams validate business, product, and feature hypotheses through rapid and data informed no-code prototyping.',
+    active: true # Add true to select section
+  }
+- {
+    name: Product Coaching,
+    icon: ti-blackboard,
+    description: 'Support and strengthen the skills of existing product teams to help them integrate an agile and rapid approach to product development.',
+    active: # Add true to select section
+  }
+
+
+
+
+#-------------------------------
+# Testimonials Section
+
+testimonial-items:
+  # - name: ""
+  #   image: "assets/images/"
+  #   designation : ""
+  #   content : ""
+ 
+
+#-------------------------------
+# Client Slider Section
+
+client-slider-items:
+  - logo: "assets/images/clients-logo/500px-logo.png"
+    url: "https://500px.com"
+    
+  - logo: "assets/images/clients-logo/rbc-ventures-logo.png"
+    url: "https://rbcventures.ca/en"
+    
+  - logo: "assets/images/clients-logo/arrive-logo.png"
+    url: "https://arrivein.com/"
+    
+  - logo: "assets/images/clients-logo/boomerang-logo.png"
+    url: "https://www.goboomerang.com/"
+    
+  - logo: "assets/images/clients-logo/wshingwell-logo.png"
+    url: "https://www.wshingwell.com/"
+    
+
+#-------------------------------
+# Contact Section
+
+contact-title: Contact Me
+contact-email: ali.tawfiq@gmail.com
