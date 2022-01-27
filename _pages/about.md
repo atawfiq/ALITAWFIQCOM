@@ -2,7 +2,7 @@
 layout: about
 title: Ali Tawfiq | Building. Scaling. Advising | Products & Ventures
 author: Ali Tawfiq
-image: assets/images/about/author_dp.jpeg
+image: assets/images/about/author_DP.jpeg
 signature: 
 permalink: /
 ---
