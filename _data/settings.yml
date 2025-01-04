@@ -8,7 +8,7 @@ description: A sneak peak into Ali Tawfiq's (professional) life
 # description: A little bit of background about my previous projects, the things I enjoy most, and the work I am always ready to pick up
 email: ali.tawfiq@gmail.com
 phone: 
-address: Toronto/Remote
+address: New York City
 copyright: Copyright Ali Tawfiq &copy;
 
 menu:
@@ -31,7 +31,7 @@ disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 # Hero Section
 
 hero:
-  hero-title: Hi! fdadI’m Ali <br> I Build, Scale & Advise <br> Products and Ventures
+  hero-title: Hi! I’m Ali <br> I enjoy building and scaling<br> impactful products 
 
 social:
 - {icon: "ti-linkedin", link: "https://www.linkedin.com/in/atawfiq/"}
