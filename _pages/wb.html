@@ -1,0 +1,892 @@
+---
+layout: none
+permalink: /wb/
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<title>Welcome Home — A Guide for Our Favorite People</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F7F3EC;
+    --warm-white: #FDFAF5;
+    --ink: #1C1A16;
+    --ink-light: #3D3A34;
+    --muted: #7A7570;
+    --accent: #8B6F47;
+    --accent-light: #C4A882;
+    --accent-pale: #EDE3D6;
+    --rust: #9B4A2E;
+    --sage: #5C7A5E;
+    --sage-pale: #E8EFE8;
+    --border: rgba(28, 26, 22, 0.12);
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3rem 2rem 4rem;
+    overflow: hidden;
+  }
+
+  .hero-sketch {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-sketch img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    opacity: 0.18;
+    filter: sepia(20%);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 20%, var(--cream) 80%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 560px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 1.4rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 380px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+  }
+
+  .hero-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--accent-light);
+    margin: 0 auto;
+  }
+
+  /* ── LAYOUT ── */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 4rem 0 1.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--accent-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: var(--ink);
+  }
+
+  /* ── CARDS ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.4rem 1.5rem;
+  }
+
+  .card-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    font-size: 14px;
+    color: var(--ink-light);
+    line-height: 1.75;
+  }
+
+  .card-highlight {
+    background: var(--accent-pale);
+    border-color: var(--accent-light);
+  }
+
+  .card-sage {
+    background: var(--sage-pale);
+    border-color: #B5CCBA;
+  }
+
+  /* ── FULL-WIDTH CARD ── */
+  .card-full {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-full .card-label {
+    margin-bottom: 0.7rem;
+  }
+
+  .card-full p {
+    font-size: 14px;
+    color: var(--ink-light);
+    line-height: 1.8;
+  }
+
+  .card-full p + p {
+    margin-top: 0.6rem;
+  }
+
+  /* ── IMPORTANT CALLOUT ── */
+  .callout {
+    background: #FBF3E8;
+    border: 1px solid #DEC89A;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: var(--ink-light);
+    line-height: 1.8;
+  }
+
+  .callout strong {
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  /* ── GOOGLE HOME BOX ── */
+  .voice-commands {
+    background: var(--ink);
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .voice-commands .vc-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 0.8rem;
+  }
+
+  .voice-commands .cmd {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 2.1;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding-bottom: 2px;
+  }
+
+  .voice-commands .cmd:last-child {
+    border-bottom: none;
+  }
+
+  /* ── AC VISUAL ── */
+  .ac-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .ac-steps {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .ac-step {
+    flex: 1;
+    min-width: 140px;
+    background: var(--cream);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .ac-step .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .ac-step p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── DUST SECTION ── */
+  .dust-hero {
+    background: var(--ink);
+    border-radius: 16px;
+    padding: 2rem 2rem 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dust-hero::before {
+    content: '🐱';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5rem;
+    opacity: 0.12;
+  }
+
+  .dust-hero .dh-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 0.6rem;
+  }
+
+  .dust-hero h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 0.8rem;
+  }
+
+  .dust-hero p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    max-width: 480px;
+    line-height: 1.8;
+  }
+
+  /* ── ROUTINE TABLE ── */
+  .routine {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .routine-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+    text-align: center;
+  }
+
+  .routine-freq {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+
+  .routine-task {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .routine-note {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* ── FOOTER SKETCH ── */
+  .footer {
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+  }
+
+  .footer-sketch {
+    width: min(500px, 90%);
+    opacity: 0.25;
+    margin: 0 auto 1.8rem;
+    display: block;
+    filter: sepia(10%);
+  }
+
+  .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-sub {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* ── NAV DOTS ── */
+  .nav {
+    position: fixed;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 100;
+  }
+
+  .nav-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    border: none;
+  }
+
+  .nav-dot.active, .nav-dot:hover {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+
+  @media (max-width: 600px) {
+    .nav { display: none; }
+    .routine { grid-template-columns: 1fr 1fr; }
+    .ac-steps { flex-direction: column; }
+  }
+
+  /* ── PASSWORD GATE ── */
+  #pw-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--cream);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  #pw-overlay .pw-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  #pw-overlay h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 300;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  #pw-overlay p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  #pw-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  #pw-input {
+    width: 100%;
+    padding: 0.8rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--warm-white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+    outline: none;
+    text-align: center;
+    letter-spacing: 0.05em;
+    transition: border-color 0.2s;
+  }
+
+  #pw-input:focus { border-color: var(--accent-light); }
+
+  #pw-input.error { border-color: var(--rust); }
+
+  #pw-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--ink);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  #pw-btn:hover { opacity: 0.85; }
+
+  #pw-error {
+    font-size: 12px;
+    color: var(--rust);
+    display: none;
+  }
+
+  .pw-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--accent-light);
+    margin: 0 auto 2rem;
+  }
+
+  /* ── EMERGENCY CONTACTS ── */
+  .emergency-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .emergency-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.4rem 1.5rem;
+  }
+
+  .emergency-card .card-label { margin-bottom: 0.4rem; }
+
+  .emergency-card .contact-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+
+  .emergency-card .contact-role {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 0.7rem;
+  }
+
+  .emergency-card a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-light);
+    padding-bottom: 1px;
+  }
+
+  @media (max-width: 600px) {
+    .emergency-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PASSWORD GATE -->
+<div id="pw-overlay">
+  <p class="pw-eyebrow">Williamsburg, Brooklyn</p>
+  <h2>Welcome.</h2>
+  <p>This page is private — enter the password to continue.</p>
+  <div class="pw-divider"></div>
+  <form id="pw-form" onsubmit="checkPassword(event)">
+    <input id="pw-input" type="password" placeholder="Password" autocomplete="off" />
+    <p id="pw-error">That's not quite right — try again.</p>
+    <button id="pw-btn" type="submit">Enter</button>
+  </form>
+</div>
+
+<!-- PAGE CONTENT -->
+<div id="content" style="display:none">
+
+<!-- Fixed nav dots -->
+<nav class="nav" aria-label="Section navigation">
+  <button class="nav-dot active" onclick="scrollTo(0,0)" title="Top"></button>
+  <button class="nav-dot" onclick="document.getElementById('arrival').scrollIntoView({behavior:'smooth'})" title="Arrival"></button>
+  <button class="nav-dot" onclick="document.getElementById('lights').scrollIntoView({behavior:'smooth'})" title="Lights"></button>
+  <button class="nav-dot" onclick="document.getElementById('dust').scrollIntoView({behavior:'smooth'})" title="Dust"></button>
+  <button class="nav-dot" onclick="document.getElementById('home').scrollIntoView({behavior:'smooth'})" title="Home"></button>
+  <button class="nav-dot" onclick="document.getElementById('emergency').scrollIntoView({behavior:'smooth'})" title="Emergency"></button>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-sketch">
+    <img src="/assets/images/Williamsburg_2_0.jpg" alt="Sketch of our Williamsburg home" />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Williamsburg, Brooklyn</p>
+    <h1 class="hero-title">Welcome to<br><em>our home.</em></h1>
+    <p class="hero-sub">We're so glad you're here. Treat everything like it's yours — because for this stretch of days, it truly is.</p>
+    <div class="hero-divider"></div>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="page">
+
+  <!-- ARRIVAL -->
+  <section id="arrival">
+    <div class="section-header">
+      <div class="section-icon">🗝️</div>
+      <h2 class="section-title">Keys &amp; Arrival</h2>
+    </div>
+
+    <div class="callout">
+      <strong>The door locks automatically.</strong> Never step out without your keys — there's no override. Seriously, tattoo this onto your hand if needed.
+    </div>
+
+    <div class="card-grid">
+      <div class="card card-highlight">
+        <p class="card-label">Your set of keys</p>
+        <p>We left a spare set hanging on the <strong>peg board</strong> inside — it's yours for the duration of the stay.</p>
+      </div>
+      <div class="card">
+        <p class="card-label">Windows</p>
+        <p>No screens on the windows — please only open them slightly, as it's genuinely dangerous for Dust. Even a small gap can be enough for her to escape. Close all windows when you head out.</p>
+      </div>
+    </div>
+
+    <div class="card-full">
+      <p class="card-label">Cameras</p>
+      <p>We have three cameras in the apartment — we turn them on when we're away to check on things. For your privacy, please <strong>unplug the bedroom camera</strong> when you settle in. You'll find it easily. Plug it back in before you leave. The other two are just keeping an eye on the common spaces (and a certain cat).</p>
+    </div>
+  </section>
+
+  <!-- LIGHTS & AC -->
+  <section id="lights">
+    <div class="section-header">
+      <div class="section-icon">💡</div>
+      <h2 class="section-title">Lights, Comfort &amp; TV</h2>
+    </div>
+
+    <div class="voice-commands">
+      <p class="vc-label">Google Home — just say it</p>
+      <p class="cmd">"Ok Google, turn living room lights on"</p>
+      <p class="cmd">"Ok Google, turn bedroom lights off"</p>
+      <p class="cmd">"Ok Google, make living room lights 50%"</p>
+    </div>
+
+    <div class="ac-card">
+      <p class="card-label">Air Conditioning — living room &amp; bedroom</p>
+      <p style="font-size:14px; color:var(--muted); margin-bottom: 0.6rem;">It's old-school but it works beautifully. Three switches, in order:</p>
+      <div class="ac-steps">
+        <div class="ac-step">
+          <div class="step-num">1</div>
+          <p>Turn the <strong>knob</strong> all the way to the cold side (far right)</p>
+        </div>
+        <div class="ac-step">
+          <div class="step-num">2</div>
+          <p>Toggle the <strong>middle switch</strong> up (middle = off, down = fan only)</p>
+        </div>
+        <div class="ac-step">
+          <div class="step-num">3</div>
+          <p>Use the <strong>right switch</strong> to control the fan speed</p>
+        </div>
+      </div>
+      <p style="font-size:13px; color:var(--muted); margin-top:1rem;">Yes, it's loud. Think of it as premium white noise. Please turn it off when you're not home and when you leave for good.</p>
+    </div>
+
+    <div class="card-full">
+      <p class="card-label">Television</p>
+      <p>Use the <strong>white remote</strong> to power on — it defaults to Chromecast. You can cast YouTube and other apps directly from your phone. Simple as that.</p>
+    </div>
+  </section>
+
+  <!-- YOUR BEDROOM -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🛏️</div>
+      <h2 class="section-title">Your Room &amp; Bathroom</h2>
+    </div>
+
+    <div class="card-grid">
+      <div class="card card-sage">
+        <p class="card-label">Bedding</p>
+        <p>Our bedroom is all yours — bed is made up with clean, freshly washed sheets. Bath towels are laid out on the bed for you.</p>
+      </div>
+      <div class="card">
+        <p class="card-label">Laundry</p>
+        <p>Washing machine is beside the fridge. Detergent lives under the kitchen sink. Use the <strong>"Mix" cycle</strong>. The dryer collects water in the top-left drawer — empty it during or after use. Dryer sheets are under the air fryer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DUST THE CAT -->
+  <section id="dust">
+    <div class="section-header">
+      <div class="section-icon">🐱</div>
+      <h2 class="section-title">Dust, Our Cat</h2>
+    </div>
+
+    <div class="dust-hero">
+      <p class="dh-label">The real host of this apartment</p>
+      <h3>Meet Dust.</h3>
+      <p>She's a little weird, occasionally dramatic, and will absolutely judge you — but give her time and she'll be sleeping next to you within the day. The more you ignore her, the more she'll want your attention. Classic.</p>
+    </div>
+
+    <div class="callout">
+      <strong>On arrival:</strong> We leave Dust in the den with the door closed while we're away. When you get home, please let her out and leave the den door open so she can roam freely. She doesn't tend to get on furniture — she'll occasionally sit on the grey chair by the window — and won't get on the bed, though she does love to hide underneath it. If she's being too active at night, feel free to put her back in the den and shut the door. She's completely comfortable there and actually likes it.
+    </div>
+
+    <div class="callout" style="border-left-color: var(--rust);">
+      <strong>Windows &amp; the front door:</strong> Please don't let Dust outside — she's an indoor cat. Be careful when opening the front door that she doesn't make a run for it. And remember: no window screens — even a small opening is dangerous for her. Only crack them slightly and never leave windows open when you go out.
+    </div>
+
+    <p style="font-size:14px; color:var(--muted); margin: 1rem 0 0.8rem;">If she hisses or swats — she doesn't hate you. She's just theatrical. It passes.</p>
+
+    <div class="card-full">
+      <p class="card-label">All her things</p>
+      <p>Everything Dust needs is in the <strong>cupboard below the air fryer</strong>: her treats (called Churu), food refills (in the big clear container), litter bags, litter deodorizer, wipes. Wood pellet litter refill is in the coat closet, below the vacuum. Lint rollers are on the counter — for you.</p>
+    </div>
+
+    <div class="routine">
+      <div class="routine-card">
+        <div class="routine-freq">Daily</div>
+        <p class="routine-task">Litter</p>
+        <p class="routine-note">Empty once a day (sometimes every other day — she doesn't always poo, she's refined)</p>
+      </div>
+      <div class="routine-card">
+        <div class="routine-freq">Every 2 days</div>
+        <p class="routine-task">Water bowl</p>
+        <p class="routine-note">Rinse and refill — it gets murky fast</p>
+      </div>
+      <div class="routine-card">
+        <div class="routine-freq">Food refill</div>
+        <p class="routine-task">Feeder</p>
+        <p class="routine-note">Red light means it needs a refill. Either way, please top it up before you leave</p>
+      </div>
+      <div class="routine-card">
+        <div class="routine-freq">Every 2 days</div>
+        <p class="routine-task">Vacuum her room</p>
+        <p class="routine-note">Wood pellets scatter — a quick vacuum keeps it manageable</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE HOME ITSELF -->
+  <section id="home">
+    <div class="section-header">
+      <div class="section-icon">🏠</div>
+      <h2 class="section-title">The Kitchen &amp; Everything Else</h2>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <p class="card-label">Coffee &amp; Snacks</p>
+        <p>Nespresso pods are in the pantry above the kettle. Snacks (a lot of them) are in the cupboard right of the dishwasher. More pantry to the left of the sink. Please eat and drink whatever you want.</p>
+      </div>
+      <div class="card">
+        <p class="card-label">Fridge &amp; Kitchen</p>
+        <p>Use everything in the kitchen and fridge with zero hesitation. It's there for you.</p>
+      </div>
+    </div>
+
+    <div class="card-full">
+      <p class="card-label">Garbage</p>
+      <p>Kitchen bags are hidden inside the garbage itself — once you remove the full bag, you'll find a roll of replacements inside. Bathroom bags are under the bathroom sink.</p>
+    </div>
+
+    <div class="card-full card-sage">
+      <p class="card-label">Plants — just once</p>
+      <p>The plants need watering once during your stay. Aim for sometime toward the end of your trip, around May 28th. Go easy — a cup of water or a bit more for the bigger ones. They're low maintenance.</p>
+    </div>
+
+    <div class="card-full">
+      <p class="card-label">Vacuum</p>
+      <p>Hung on its charging station in the coat closet. Ready to go.</p>
+    </div>
+  </section>
+
+  <!-- EMERGENCY CONTACTS -->
+  <section id="emergency">
+    <div class="section-header">
+      <div class="section-icon">📞</div>
+      <h2 class="section-title">Emergency Contacts</h2>
+    </div>
+
+    <div class="callout" style="border-left-color: var(--rust);">
+      <strong>If you can't reach us</strong> and there's an emergency in the unit or you get locked out, contact Visar our building super. For anything involving Dust, reach Masha.
+    </div>
+
+    <div class="emergency-grid">
+      <div class="emergency-card">
+        <p class="card-label">Building emergency / locked out</p>
+        <p class="contact-name">Visar</p>
+        <p class="contact-role">Building superintendent</p>
+        <a href="tel:+19294176132">+1 (929) 417-6132</a>
+      </div>
+      <div class="emergency-card">
+        <p class="card-label">Emergency with Dust</p>
+        <p class="contact-name">Masha</p>
+        <p class="contact-role">Our friend</p>
+        <a href="tel:+19296567790">+1 (929) 656-7790</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+<p class="footer-title">Make yourself at home.</p>
+  <p class="footer-sub">We mean that completely. ✦ Williamsburg, Brooklyn</p>
+</footer>
+
+</div><!-- end #content -->
+
+<script>
+  // ── PASSWORD GATE ──
+  const CORRECT = 'Mar7abaBeekum';
+
+  function unlock() {
+    document.getElementById('pw-overlay').style.display = 'none';
+    document.getElementById('content').style.display = '';
+  }
+
+  function checkPassword(e) {
+    e.preventDefault();
+    const input = document.getElementById('pw-input');
+    const error = document.getElementById('pw-error');
+    if (input.value === CORRECT) {
+      sessionStorage.setItem('hg_auth', '1');
+      unlock();
+    } else {
+      input.classList.add('error');
+      error.style.display = 'block';
+      input.value = '';
+      setTimeout(() => input.classList.remove('error'), 1200);
+    }
+  }
+
+  if (sessionStorage.getItem('hg_auth') === '1') unlock();
+
+  // ── SECTION NAV ──
+  const dots = document.querySelectorAll('.nav-dot');
+  const sections = ['arrival','lights','dust','home','emergency'];
+
+  function updateNav() {
+    const scroll = window.scrollY + window.innerHeight / 3;
+    let active = 0;
+    sections.forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= scroll) active = i + 1;
+    });
+    dots.forEach((d, i) => d.classList.toggle('active', i === active));
+  }
+
+  window.addEventListener('scroll', updateNav, { passive: true });
+</script>
+</body>
+</html>
