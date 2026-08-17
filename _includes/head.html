@@ -14,7 +14,9 @@
   {% if page.noindex %}<meta name="robots" content="noindex,nofollow">{% endif %}
 
   <!-- Open Graph -->
-  <meta property="og:type" content="profile">
+  <!-- 'profile' makes LinkedIn render an identity card (name + Person.image from
+       the JSON-LD) and ignore og:title/description/image entirely -->
+  <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:description" content="{{ page_desc }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
