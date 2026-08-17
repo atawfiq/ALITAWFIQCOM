@@ -1,6 +1,7 @@
 ---
 layout: about
-title: Ali Tawfiq | Building. Scaling. Advising | Products & Ventures
+title: "Ali Tawfiq — Senior Product Manager, Google Search (AI Mode & AI Overviews)"
+description: "Ali Tawfiq is a Senior Product Manager at Google Search working on AI Mode and AI Overviews — generative AI response quality, multilingual and international search, at 2B+ user scale. Based in New York City."
 author: Ali Tawfiq
 image: assets/images/about/author_DP.jpeg
 signature: 
@@ -12,7 +13,7 @@ I'm a <b>Senior Product Manager</b> at <b>Google Search</b>, working on AI Searc
 
 Over 14 years, my work has spanned a range of industries and company stages, from wearable technology and digital health to social platforms and now search at global scale, but the pull has always been the same: the early uncertain work of taking something from 0 to 1, and the equally hard challenge of scaling it from 1 to 10. Along the way, I founded Boomerang (2019–2021), scrappily found PMF, raised capital, and built a lean team of over 15 people around a platform that connected over 70,000 baby boomers finding community and purpose in retirement.
 
-More than anything, I want to keep doing what I love most — scrappily building AI products and scaling them to millions of people globally. You can find me on [LinkedIn](https://www.linkedin.com/in/atawfiq/) or have a look at my [Resume](/downloads/Ali_Tawfiq_Resume_0626.pdf).
+More than anything, I want to keep doing what I love most — scrappily building AI products and scaling them to millions of people globally. You can find me on [LinkedIn](https://www.linkedin.com/in/atawfiq/) or have a look at my [Resume](/resume).
 
 Let's connect!
 

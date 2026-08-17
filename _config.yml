@@ -1,5 +1,5 @@
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "atawfiq.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://alitawfiq.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
@@ -32,3 +32,6 @@ exclude:
   - LICENSE.text
   - README.md
   - SECURITY.md
+  - CLAUDE_CODE_HANDOFF.md
+  - vendor
+  - .bundle
