@@ -1,14 +1,58 @@
 <head>
   <meta charset="utf-8">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</title>
+  {% assign s = site.data.settings %}
+  {% assign page_title = page.title | default: s.title %}
+  {% assign page_desc = page.description | default: s.description %}
+
+  <title>{{ page_title }}</title>
 
   <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="{%if page.description%}{{page.description}}{%else%}{{site.data.settings.description}}{%endif%}">
-  
-  {% if site.author %}
-  <meta name="author" content="{{ . }}">
-  {% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page_desc }}">
+  <meta name="author" content="{{ s.author }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% if page.noindex %}<meta name="robots" content="noindex,nofollow">{% endif %}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/images/og-card.png' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Ali Tawfiq">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_desc }}">
+  <meta name="twitter:image" content="{{ '/assets/images/og-card.png' | absolute_url }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ali Tawfiq",
+    "url": "https://alitawfiq.com",
+    "image": "https://alitawfiq.com/assets/images/about/author_DP.jpeg",
+    "jobTitle": "Senior Product Manager",
+    "worksFor": { "@type": "Organization", "name": "Google" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "addressCountry": "US"
+    },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Toronto" },
+    "knowsAbout": ["Generative AI","Large Language Models","AI Search","Product Management","Multilingual Search","Search Quality"],
+    "knowsLanguage": ["en","ar"],
+    "sameAs": [
+      "https://www.linkedin.com/in/atawfiq/",
+      "https://www.producthunt.com/@atawfiq"
+    ]
+  }
+  </script>
 
   <!-- ** Plugins Needed for the Project ** -->
   {% for css in site.data.plugins.css %}
@@ -19,8 +63,9 @@
   <link href="{{ '/assets/scss/style.css' | relative_url }}" rel="stylesheet">
 
   <!--Favicon-->
-  <link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
-  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
+  <link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/x-icon">
+  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/x-icon">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
 
   <!-- google analytics -->
   {% if site.data.settings.google-analytics %}

@@ -4,7 +4,7 @@
 title: Ali Tawfiq
 logo: 
 author: Ali Tawfiq
-description: A sneak peak into Ali Tawfiq's (professional) life
+description: "Ali Tawfiq is a Senior Product Manager at Google Search working on AI Mode and AI Overviews — generative AI response quality, multilingual and international search, at 2B+ user scale. Based in New York City."
 # description: A little bit of background about my previous projects, the things I enjoy most, and the work I am always ready to pick up
 email: ali.tawfiq@gmail.com
 phone: 
@@ -18,7 +18,7 @@ menu:
 
 #-------------------------------
 # Google Analytics Section
-google-analytics: UA-61826002-1 # UA-XXXXXX-X
+google-analytics: G-53LPXVDC19 # GA4 Measurement ID
 
 
 #-------------------------------
