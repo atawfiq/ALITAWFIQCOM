@@ -5,6 +5,9 @@
 
     // Sticky Menu
     $(window).scroll(function () {
+        if (!$('.navigation').length) {
+            return;
+        }
         if ($('.navigation').offset().top > 100) {
             $('.navigation').addClass('nav-bg');
         } else {
@@ -38,6 +41,12 @@
     window.onload = function () {
 
         var parallaxBox = document.getElementById('parallax');
+
+        // the hero section isn't used on this site — bail before dereferencing l2…l9
+        if (!parallaxBox || !document.getElementById('l2')) {
+            return;
+        }
+
         var
             /* c1left = document.getElementById('l1').offsetLeft,
                        c1top = document.getElementById('l1').offsetTop, */
@@ -87,70 +96,78 @@
     /* ########################################### /hero parallax ############################################## */
 
     // testimonial-slider
-    $('.testimonial-slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        arrows: false,
-        adaptiveHeight: true
-    });
+    if ($('.testimonial-slider').length) {
+        $('.testimonial-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            arrows: false,
+            adaptiveHeight: true
+        });
+    }
 
 
     // clients logo slider
-    $('.client-logo-slider').slick({
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        dots: false,
-        arrows: false,
-        responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
+    if ($('.client-logo-slider').length) {
+        $('.client-logo-slider').slick({
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            dots: false,
+            arrows: false,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 400,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
                 }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 400,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
+            ]
+        });
+    }
 
     // Shuffle js filter and masonry
     var Shuffle = window.Shuffle;
     var jQuery = window.jQuery;
 
-    var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
-        itemSelector: '.shuffle-item',
-        buffer: 1
-    });
+    // the portfolio section isn't used on this site — Shuffle throws on a null element
+    var shuffleEl = document.querySelector('.shuffle-wrapper');
+    if (shuffleEl && Shuffle) {
+        var myShuffle = new Shuffle(shuffleEl, {
+            itemSelector: '.shuffle-item',
+            buffer: 1
+        });
 
-    jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
-        var input = evt.currentTarget;
-        if (input.checked) {
-            myShuffle.filter(input.value);
-        }
-    });
+        jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
+            var input = evt.currentTarget;
+            if (input.checked) {
+                myShuffle.filter(input.value);
+            }
+        });
+    }
 
 
 
