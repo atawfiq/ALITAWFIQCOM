@@ -31,6 +31,7 @@
   <meta name="twitter:description" content="{{ page_desc }}">
   <meta name="twitter:image" content="{{ '/assets/images/og-card.png' | absolute_url }}">
 
+  {% unless page.no_jsonld %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,6 +56,7 @@
     ]
   }
   </script>
+  {% endunless %}
 
   <!-- ** Plugins Needed for the Project ** -->
   {% for css in site.data.plugins.css %}
