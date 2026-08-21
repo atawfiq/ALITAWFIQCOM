@@ -34,7 +34,6 @@ hero:
   hero-title: Hi! I’m Ali <br> I enjoy building and scaling<br> impactful products 
 
 social:
-- {icon: 'ti-linkedin', link: 'https://www.linkedin.com/in/atawfiq/'}
 
 #-------------------------------
 # About (Section and Page)
@@ -126,8 +125,6 @@ selected-work:
 # Proof strip
 
 proof-points:
-- "2B+ users reached"
-- "0→1 twice"
 - "14 years in product"
 - "New York City"
 

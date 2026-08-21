@@ -13,8 +13,17 @@
     }
   }
   @include desktop {
-    padding: 20px;
+    padding: 16px 20px;
     background: $primary-color;
+    .navbar-brand h3 {
+      font-size: 30px;
+    }
+  }
+  @include tablet {
+    padding: 12px 20px;
+    .navbar-brand h3 {
+      font-size: 26px;
+    }
   }
 }
 

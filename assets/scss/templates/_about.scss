@@ -1,9 +1,35 @@
 .page-title-alt{
   padding: 200px 0 70px;
+
+  @include desktop {
+    padding: 150px 0 55px;
+  }
+  @include tablet {
+    padding: 124px 0 44px;
+  }
+
+  // h3 has no responsive step in _typography, so the hero headline
+  // stays 40px on a 375px screen and eats six lines
+  h3 {
+    @include desktop {
+      font-size: 34px;
+    }
+    @include tablet {
+      font-size: 27px;
+      line-height: 1.3;
+    }
+    @include mobile-xs {
+      font-size: 24px;
+    }
+  }
 }
 
 .border-thick{
   border: 10px solid;
+
+  @include tablet {
+    border-width: 6px;
+  }
 }
 
 .drag-lg-top{

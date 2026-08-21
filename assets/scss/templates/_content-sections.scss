@@ -110,8 +110,8 @@
 
 /* --- hero proof strip + CTAs --- */
 .proof-strip {
-  margin-top: 26px;
-  margin-bottom: 22px;
+  margin-top: 30px;
+  margin-bottom: 34px;
 }
 
 .proof-item {
@@ -167,11 +167,26 @@
     font-size: 18px;
   }
 
-  .proof-item {
-    display: block;
+  .work-card {
+    padding: 18px 18px;
+  }
+}
 
-    &:not(:last-child):after {
-      content: none;
-    }
+/* full-width CTAs read as proper tap targets on a phone */
+@include mobile {
+  .hero-cta .btn {
+    display: block;
+    width: 100%;
+    margin: 0 0 12px 0;
+    text-align: center;
+  }
+}
+
+/* comfortable tap targets on touch screens - these links were 30-32px tall */
+@include tablet {
+  .footer-section p a,
+  .drag-lg-top a {
+    display: inline-block;
+    padding: 13px 0;
   }
 }
