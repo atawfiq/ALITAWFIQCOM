@@ -20,7 +20,9 @@
     }
   }
   @include tablet {
-    padding: 12px 20px;
+    // .navbar adds 16px of its own, so 8 here lines the brand up
+    // with the 24px content gutter
+    padding: 12px 8px;
     .navbar-brand h3 {
       font-size: 26px;
     }

@@ -37,6 +37,15 @@
   @include desktop {
     margin-top: 0;
   }
+
+  // the portrait is w-100; unconstrained it fills the whole phone width
+  @include tablet {
+    .shadow-down {
+      max-width: 220px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .page-title-alt{

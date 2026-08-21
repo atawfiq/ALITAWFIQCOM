@@ -184,6 +184,10 @@
 
 /* comfortable tap targets on touch screens - these links were 30-32px tall */
 @include tablet {
+  .footer-section .col-md-4:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
   .footer-section p a,
   .drag-lg-top a {
     display: inline-block;

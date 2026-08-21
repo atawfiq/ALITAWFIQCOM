@@ -272,3 +272,12 @@ textarea.form-control{
   }
 }
 /* /card */
+
+/* Bootstrap's default 15px gutter leaves almost no margin on a phone */
+@include tablet {
+  .container,
+  .container-fluid {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
