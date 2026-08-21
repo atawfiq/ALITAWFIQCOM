@@ -34,6 +34,7 @@ hero:
   hero-title: Hi! I’m Ali <br> I enjoy building and scaling<br> impactful products 
 
 social:
+- {icon: 'ti-linkedin', link: 'https://www.linkedin.com/in/atawfiq/'}
 
 #-------------------------------
 # About (Section and Page)
@@ -88,10 +89,47 @@ skills:
 
 experience-title: Experience
 experience:
-- {name: Co-founder & CEO, icon: 'icon-1.png', date: 'Feb 2019 - Dec 2021', organization: 'Boomerang'}
-- {name: Product & Business Advisor, icon: 'icon-2.png', date: '2015 - Present', organization: 'Freelance'}
-- {name: Product Director/ Executive Advisor, icon: 'icon-3.png', date: 'Apr 2018 - Present', organization: 'RBC Ventures'}
-- {name: Lead Product Manager, icon: 'icon-1.png', date: 'May 2015 - Apr 2018', organization: '500px'}
+- {role: "Senior Product Manager, Google Search", org: "Google", date: "Aug 2022 – Present", location: "New York, USA"}
+- {role: "Product Director & Executive Advisor", org: "RBC Ventures", date: "Apr 2018 – Jun 2022", location: "Toronto, Canada"}
+- {role: "Co-founder & CEO", org: "Boomerang", date: "Feb 2019 – Dec 2021", location: "Toronto, Canada"}
+- {role: "Product & Venture Consultant", org: "Freelance", date: "2015 – 2022", location: "Remote"}
+- {role: "Lead Product Manager", org: "500px", date: "May 2016 – Apr 2018", location: "Toronto, Canada"}
+- {role: "Engineering & Product Lead", org: "OMsignal", date: "Mar 2014 – Sep 2015", location: "Montreal, Canada"}
+- {role: "Algorithm Developer", org: "Huron Technologies", date: "Feb 2013 – Aug 2013", location: "Waterloo, Canada"}
+- {role: "Algorithm Developer, Digital Pathology", org: "GE Healthcare", date: "May 2012 – Nov 2012", location: "Toronto, Canada"}
+
+#-------------------------------
+# Selected Work Section
+
+selected-work-title: Selected Work
+selected-work:
+- title: "AI Overviews"
+  org: "Google Search"
+  content: "Part of the small founding team that took it 0→1. Now serves 2B+ users globally, across all languages."
+- title: "AI Mode"
+  org: "Google Search"
+  content: "Founding team; launched and scaling worldwide. Leads core GenAI response quality, the in-line writing experience, and the effort that made AI Mode state-of-the-art on freshness."
+- title: "Multilingual & Next Billion User search"
+  org: "Google"
+  content: "GenAI search experiences for multilingual users and Novice Internet Users, including voice-first search that works around literacy barriers."
+- title: "Boomerang"
+  org: "Founder & CEO"
+  content: "Built a platform against social isolation in retirement to 70,000+ members. Raised capital, grew the team to 15, led the pandemic pivot from 8k to 70k users."
+- title: "500px"
+  org: "Lead Product Manager"
+  content: "Personalised discovery, online classes, the global photographer Directory, premium memberships and a marketplace, for 14M photographers. Through to acquisition."
+- title: "OMsignal"
+  org: "Engineering & Product Lead"
+  content: "Signal-processing algorithms on live physiological data, powering adaptive workouts in wearable garments."
+
+#-------------------------------
+# Proof strip
+
+proof-points:
+- "2B+ users reached"
+- "0→1 twice"
+- "14 years in product"
+- "New York City"
 
 
 #-------------------------------
