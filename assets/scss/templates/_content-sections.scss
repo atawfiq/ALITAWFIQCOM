@@ -1,0 +1,196 @@
+/* Experience timeline, Selected Work and the hero proof strip.
+   Built for the single live page. Reuses the existing palette, type
+   scale and breakpoint mixins - no new dependencies. */
+
+.section-title-sm {
+  font-family: $secondary-font;
+  font-size: 32px;
+  margin-bottom: 30px;
+  padding-bottom: 12px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 56px;
+    height: 3px;
+    background: $primary-color;
+  }
+}
+
+/* --- experience timeline --- */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: rgba($primary-color, .25);
+  }
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 26px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 5px;
+    @include size(14px);
+    border-radius: 50%;
+    background: $body-color;
+    border: 3px solid $primary-color;
+  }
+}
+
+.timeline-role {
+  font-size: 20px;
+  margin-bottom: 4px;
+  color: $text-color-dark;
+}
+
+.timeline-meta {
+  font-size: 15px;
+  color: $text-color-light;
+}
+
+.timeline-org {
+  color: $primary-color;
+  font-weight: 500;
+}
+
+.timeline-sep {
+  margin: 0 8px;
+}
+
+/* --- selected work --- */
+.work-card {
+  border: 1px solid $gray;
+  border-left: 3px solid $primary-color;
+  border-radius: 5px;
+  padding: 22px 24px;
+  transition: box-shadow .2s ease, transform .2s ease;
+
+  &:hover {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+    transform: translateY(-2px);
+  }
+}
+
+.work-title {
+  font-size: 20px;
+  margin-bottom: 2px;
+  color: $text-color-dark;
+}
+
+.work-org {
+  font-size: 13px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.work-content {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* --- hero proof strip + CTAs --- */
+.proof-strip {
+  margin-top: 30px;
+  margin-bottom: 34px;
+}
+
+.proof-item {
+  color: $white;
+  font-family: $primary-font;
+  font-size: 15px;
+  opacity: .92;
+
+  &:not(:last-child):after {
+    content: '·';
+    margin-left: 12px;
+    opacity: .55;
+  }
+}
+
+.hero-cta {
+  .btn {
+    font-size: 16px;
+    padding: 11px 26px;
+    margin: 0 12px 12px 0;
+    // .btn capitalizes, which would render "Connect On LinkedIn"
+    text-transform: none;
+  }
+
+  .btn-hero-solid {
+    background: $white;
+    color: $primary-color;
+
+    &:hover {
+      background: rgba($white, .88);
+      color: $primary-color;
+    }
+  }
+
+  .btn-hero-ghost {
+    background: transparent;
+    color: $white;
+    border: 1px solid rgba($white, .7);
+
+    &:hover {
+      background: rgba($white, .14);
+      color: $white;
+    }
+  }
+}
+
+@include tablet {
+  .section-title-sm {
+    font-size: 26px;
+  }
+
+  .timeline-role {
+    font-size: 18px;
+  }
+
+  .work-card {
+    padding: 18px 18px;
+  }
+}
+
+/* full-width CTAs read as proper tap targets on a phone */
+@include mobile {
+  .hero-cta .btn {
+    display: block;
+    width: 100%;
+    margin: 0 0 12px 0;
+    text-align: center;
+  }
+}
+
+/* comfortable tap targets on touch screens - these links were 30-32px tall */
+@include tablet {
+  .footer-section .col-md-4:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  .footer-section p a,
+  .drag-lg-top a {
+    display: inline-block;
+    padding: 13px 0;
+  }
+}

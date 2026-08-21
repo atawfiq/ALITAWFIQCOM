@@ -1,0 +1,22 @@
+<!-- selected work -->
+<section class="section pt-0" id="selected-work">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="section-title-sm">{{ site.data.settings['selected-work-title'] }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      {% for item in site.data.settings['selected-work'] %}
+      <div class="col-md-6 mb-4">
+        <div class="work-card h-100">
+          <h4 class="work-title">{{ item.title }}</h4>
+          <p class="work-org mb-2">{{ item.org }}</p>
+          <p class="work-content mb-0">{{ item.content }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- /selected work -->
