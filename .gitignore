@@ -7,3 +7,6 @@ vendor/
 .bundle/
 CLAUDE_CODE_HANDOFF.md
 .claude/
+
+# personal asset, not part of the site build
+assets/images/linkedin-banner.png
